@@ -25,7 +25,7 @@ export default function Navbar(props){
     }
 
     for(let i=0;i<navigation.length;i++){
-        if(props.value == i){
+        if(props.value === i){
             allSpans.push(<span onClick={()=>change(i)} style={{borderBottom: '3px solid', paddingBottom: '2px', borderColor: colors[i]}}>{navigation[i]}</span>)
         }else{
             allSpans.push(<span onClick={()=>change(i)}>{navigation[i]}</span>)
