@@ -16,12 +16,14 @@ export default function Home(props){
         if(pos > 0) props.change(0)
     });
 
+    console.log(nav)
+
     return(
         <motion.div ref={targetRef} style={{scale,opacity}} className='home'>
             <div className='home_inner'>
                     <div className='home_main'>
                         <div className='home_img_container'>
-                            <img src={require("../imgs/home__img.png")} />
+                            <img alt="" src={require("../imgs/home__img.png")} />
                         </div>
                         <div  className='home_title'>  
                             <motion.div initial={{scale: 0}} animate={{scale: 1}} transition={{duration: .6, delay: .3}} className='home_firstmsg_bg'>

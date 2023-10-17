@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React from 'react'
 
 export default function Navbar(props){
 
@@ -9,17 +9,17 @@ export default function Navbar(props){
 
     function change(id){
         props.change(id); 
-        if(id==1)
+        if(id===1)
             props.about.current?.scrollIntoView({behavior: 'smooth'});
-        else if(id==2)
+        else if(id===2)
             props.skills.current?.scrollIntoView({behavior: 'smooth'});
-        else if(id==0)
+        else if(id===0)
         window.scrollTo({
             top: 0,
             left: 0,
             behavior: "smooth"
           });
-        else if(id==3)
+        else if(id===3)
           props.contact.current?.scrollIntoView({behavior: 'smooth'});
             
     }

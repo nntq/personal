@@ -14,7 +14,7 @@ export default function HomeMB(){
                 <div className='home-mb_inner'>
                     <div className='home-mb_main'>
                         <div className='home-mb_img_container'>
-                            <img src={require("../imgs/home__img.png")} />
+                            <img alt="" src={require("../imgs/home__img.png")} />
                         </div>
                         <div  className='home-mb_title'>  
                             <div initial={{scale: 0}} animate={{scale: 1}} transition={{duration: .6, delay: .3}} className='home-mb_firstmsg_bg'>

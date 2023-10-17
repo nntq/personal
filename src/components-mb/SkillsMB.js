@@ -15,11 +15,6 @@ export default function SkillsMB(){
         return pos === 1 || pos === 0 ? "relative" : "fixed";
     });
 
-    const visibility = useTransform(scrollYProgress, (pos)=>{
-
-        return pos === 1 || pos === 0 ? "hidden" : "visible";
-    });
-
     const opacity = useTransform(scrollYProgress, [0.6, 0.8], [1,0]);
 
 

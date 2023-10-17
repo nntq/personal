@@ -40,7 +40,7 @@ export default function AboutMB(){
                     <h1>About</h1>
                 </motion.div>
                 <motion.div ref={imgRef} style={{scale, y: yImg, opacity: opacityImg}} className='about-mb_img'>
-                    <img className='sky_img-mb' src={require("../imgs/sky.jpeg")} />
+                    <img alt="" className='sky_img-mb' src={require("../imgs/sky.jpeg")} />
                 </motion.div>
             </motion.div>
         </div>

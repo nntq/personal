@@ -4,7 +4,6 @@ import {motion, useScroll, useTransform} from 'framer-motion'
 export default function Skills(props){
     
     const skillRef = useRef(null);
-    const introRef = useRef(null);
 
     const {scrollYProgress} = useScroll({
         target: skillRef,
@@ -26,6 +25,8 @@ export default function Skills(props){
     const nav = useTransform(scrollYProgress, (pos) => {
         if(pos > 0) props.change(2)
     });
+
+    console.log(nav)
 
     const stat1 = useTransform(scrollYProgress, [0, 0.2], ["100%", "20%"]);
     const stat2 = useTransform(scrollYProgress, [0, 0.1], ["100%", "5%"]);

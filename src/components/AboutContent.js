@@ -40,7 +40,7 @@ export default function AboutContent(props){
 
     React.useEffect(() => {
         content()
-    }, [])
+    })
 
     return(
         <div ref={conRef} className='about_content'>
@@ -49,7 +49,7 @@ export default function AboutContent(props){
                 <div   className='about_content_main'>
                     <div className='about_content_card'>
                         <div className='about_content_card_inner'>
-                        <motion.img initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 2.5,duration: .5}} className="about__img" src={require('../imgs/about__img.png')} />
+                        <motion.img alt="" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 2.5,duration: .5}} className="about__img" src={require('../imgs/about__img.png')} />
                         <motion.div initial={{x: '-100vw', y: '100vh'}} animate={{x:0,y:0}} transition={{duration: 2, delay: 1}} className="about__text">
                         <div className="about__text__inner">
                          Привет, меня зовут Максим Козлов. Я разработчик из Украины проживающий в Италии. Учась в школе я увлекся веб разработкой и начал самостоятельно и постепенно окунаться в мир программирования, так как в интернете нет особо хорошо структурированной информации, а пытаясь обучаться самостоятельно я "прыгал" с одной темы на другую, мною было принято решение после окончания экономической школы с отличием в Италии поступить в университет и поэтому в данный момент я учусь в University of Salerno, на факультете программирования. На этом сайте вы найдете мои работы которые я выполнял для практики и обучения, некоторый из них далеки от идеала, но я не вношу в них поправки чтобы видеть свой прогресс и понимать, что можно было улучшить и как.
@@ -65,7 +65,7 @@ export default function AboutContent(props){
                         
                     </div>
                     <motion.div style={{x, y}} className='about_rocket'>
-                            <img src='https://www.svgrepo.com/show/434246/rocket.svg' />
+                            <img alt="" src='https://www.svgrepo.com/show/434246/rocket.svg' />
                     </motion.div>
                     <div className='about_planet'>
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@ export default function AboutContent(props){
                     </div>
 
                     <motion.div style={{y:yWave}} className='about_outro'>
-                        <img src={require('../imgs/skills__wave.png')} />
+                        <img alt="" src={require('../imgs/skills__wave.png')} />
                         <div className='about_outro_footer'>
                             
                         </div>

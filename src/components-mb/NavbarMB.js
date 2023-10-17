@@ -13,17 +13,17 @@ export default function NavbarMB(props){
     }
 
     function change(id){
-        if(id==1)
+        if(id===1)
             props.about.current?.scrollIntoView({behavior: 'smooth'});
-        else if(id==2)
+        else if(id===2)
             props.skills.current?.scrollIntoView({behavior: 'smooth'});
-        else if(id==0)
+        else if(id===0)
         window.scrollTo({
             top: 0,
             left: 0,
             behavior: "smooth"
           });
-        else if(id==3)
+        else if(id===3)
           props.contact.current?.scrollIntoView({behavior: 'smooth'});
             
     }
@@ -46,10 +46,10 @@ export default function NavbarMB(props){
 
                 <motion.div animate={open?"open":"closed"} variants={variants} className='navbar-mb_inner_content'>
                        { open && (<motion.ul initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: .2}} className='navbar-mb_list'>
-                            <a onClick={()=>change(0)}>home</a>
-                            <a onClick={()=>change(1)}>about</a>
-                            <a onClick={()=>change(2)}>skills</a>
-                            <a onClick={()=>change(3)}>contact</a>
+                            <a href="" onClick={()=>change(0)}>home</a>
+                            <a href="" onClick={()=>change(1)}>about</a>
+                            <a href="" onClick={()=>change(2)}>skills</a>
+                            <a href="" onClick={()=>change(3)}>contact</a>
                         </motion.ul>)}
                 </motion.div>
             </div>

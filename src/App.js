@@ -1,8 +1,5 @@
 import './App.css';
 import './MB.css';
-import {motion} from 'framer-motion'
-import Box from './Box'
-import BlueBox from './BlueBox';
 import Home from './components/Home';
 import About from './components/About';
 import AboutContent from './components/AboutContent';
@@ -17,7 +14,6 @@ import AboutContentMB from './components-mb/AboutContentMB';
 import SkillsMB from './components-mb/SkillsMB';
 import SkillsContentMB from './components-mb/SkillsContentMB';
 import ContactMB from './components-mb/ContactMB';
-import NavbarMB from './components-mb/NavbarMB';
 
 function App() {
 

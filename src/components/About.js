@@ -1,6 +1,5 @@
 import {React, useRef} from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
-import AboutContent from './AboutContent';
 
 export default function About(props){
 
@@ -31,6 +30,7 @@ export default function About(props){
     const nav = useTransform(scrollForImg, (pos) => {
         if(pos > 0) props.change(1)
     });
+    console.log(nav);
     const yImg = useTransform(scrollForImg, [0, 0.8], ["0%", "-90%"]);
     const opacityImg = useTransform(scrollForImg, [0, 0.9, 1], [1, 1, 0]);
 
@@ -45,7 +45,7 @@ export default function About(props){
                         me
                     </h1>
                 <motion.div style={{scale, y:yImg}} ref={imgRef} className='about_intro_img'>
-                    <img className='sky_img' src={require("../imgs/sky.jpeg")} />
+                    <img alt="" className='sky_img' src={require("../imgs/sky.jpeg")} />
                 </motion.div>
                 </motion.div>
             </motion.div>

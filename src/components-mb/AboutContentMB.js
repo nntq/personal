@@ -22,7 +22,7 @@ export default function AboutContentMB(props){
             <motion.div ref={props.about} style={{position}} className='about_content-mb_inner'>
                 <div className='about_content-mb_main'>
                     <div className='about_content-mb_photo'>
-                        <img src={require('../imgs/about__img.png')} />
+                        <img alt="" src={require('../imgs/about__img.png')} />
                     </div>
                     <div className='about_content-mb_text'>
                         <p>
@@ -32,7 +32,7 @@ export default function AboutContentMB(props){
                 </div>
 
                 <motion.div style={{y:yWave}} className='about_outro'>
-                        <img src={require('../imgs/skills__wave.png')} />
+                        <img alt="" src={require('../imgs/skills__wave.png')} />
                         <div className='about_outro_footer'>
                             
                         </div>
