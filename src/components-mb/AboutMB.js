@@ -23,6 +23,11 @@ export default function AboutMB(){
 
     const scrollForImg = scrollDataImg.scrollYProgress;
 
+    const visibility = useTransform(scrollYProgress, (pos) => {
+        console.log("position "+pos);
+        return pos>0&&pos<1 ? "visible" : "hidden";
+    })
+
     const y = useTransform(scrollYProgress, [0, 0.2], ["50%", "0%"]);
 
     const scale = useTransform(scrollForImg, [0.1, 1], [1, 25]);
@@ -39,7 +44,7 @@ export default function AboutMB(){
                 <motion.div style={{opacity}} className='about-mb_title'>
                     <h1>About</h1>
                 </motion.div>
-                <motion.div ref={imgRef} style={{scale, y: yImg, opacity: opacityImg}} className='about-mb_img'>
+                <motion.div ref={imgRef} style={{scale, y: yImg, opacity: opacityImg, visibility}} className='about-mb_img'>
                     <img alt="" className='sky_img-mb' src={require("../imgs/sky.jpeg")} />
                 </motion.div>
             </motion.div>

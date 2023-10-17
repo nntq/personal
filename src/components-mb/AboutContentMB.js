@@ -15,11 +15,15 @@ export default function AboutContentMB(props){
         return pos>0&&pos<1 ? "fixed" : "relative";
     })
 
+    const visibility = useTransform(scrollYProgress, (vis) => {
+        return vis === 1 || vis === 0 ? "hidden" : "visible";
+    })
+
     const yWave = useTransform(scrollYProgress, [0.3, 0.5], ["30%", "-100%"])
 
     return (
         <div ref={aboutContentRef} className='about_content-mb'>
-            <motion.div ref={props.about} style={{position}} className='about_content-mb_inner'>
+            <motion.div ref={props.about} style={{position, visibility}} className='about_content-mb_inner'>
                 <div className='about_content-mb_main'>
                     <div className='about_content-mb_photo'>
                         <img alt="" src={require('../imgs/about__img.png')} />
