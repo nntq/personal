@@ -63,6 +63,10 @@ export default function ContactMB(){
 
     return (
         <div ref={contactRef} className='contact-mb'>
+            {submitted && (<motion.div initial className='submitted'>
+                    <p>Thank you for your message.</p>
+                </motion.div>)
+                }
             <motion.div style={{x}} className='contact-mb_inner'>
             <div className='contact_form'>
                             <h3>I'd love to hear from you</h3>
