@@ -1,7 +1,11 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import {motion, useScroll, useTransform} from 'framer-motion'
 
 export default function ContactMB(){
+
+    const [submitted, setSubmit] = useState(false);
+
+    const FORM = "https://public.herotofu.com/v1/9ec60e80-68ea-11ee-8bcd-4fcc9e7e7286"
 
     const contactRef = useRef(null);
 
@@ -10,7 +14,52 @@ export default function ContactMB(){
         offset: ["start end", "end start"]
     });
 
-    const x = useTransform(scrollYProgress, [-0.5, 0.45], ["100%", "0%"])
+    const x = useTransform(scrollYProgress, [-0.5, 0.45], ["100%", "0%"]);
+
+    const submit = (e) => {
+        e.preventDefault();
+
+        const inputs = e.target.elements;
+        console.log(inputs)
+        const data = {};
+
+        for(let i=0; i< inputs.length; i++){
+            if(inputs[i].name){
+                data[inputs[i].name] = inputs[i].value;
+            }
+        }
+
+
+        fetch(FORM, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        }).then((res) => {
+            if(!res.ok){
+                throw new Error('Form response was not ok');
+            } else {
+                setSubmit(true);
+            }
+        }).catch((err)=>{
+            e.target.submit();
+        });
+
+        setSubmit(true)
+
+    }
+
+    useEffect(()=>{
+        console.log(submitted)
+        if(submitted){
+            setTimeout(()=>{
+                setSubmit(false)
+                console.log(submitted)
+            }, 1000)
+        }
+    })
 
     return (
         <div ref={contactRef} className='contact-mb'>
@@ -18,7 +67,7 @@ export default function ContactMB(){
             <div className='contact_form'>
                             <h3>I'd love to hear from you</h3>
                             <div className='contact_form_inner'>
-                                <form>
+                                <form action={FORM} onSubmit={submit}>
                                     <div className='form_header'>
                                         <div className='form_header_circle'>
 
