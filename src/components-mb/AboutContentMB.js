@@ -30,7 +30,8 @@ export default function AboutContentMB(props){
                     </div>
                     <div className='about_content-mb_text'>
                         <p>
-                        Привет, меня зовут Максим Козлов. Я разработчик из Украины проживающий в Италии. Учась в школе я увлекся веб разработкой и начал самостоятельно и постепенно окунаться в мир программирования, так как в интернете нет особо хорошо структурированной информации, а пытаясь обучаться самостоятельно я "прыгал" с одной темы на другую, мною было принято решение после окончания экономической школы с отличием в Италии поступить в университет и поэтому в данный момент я учусь в University of Salerno, на факультете программирования. На этом сайте вы найдете мои работы которые я выполнял для практики и обучения, некоторый из них далеки от идеала, но я не вношу в них поправки чтобы видеть свой прогресс и понимать, что можно было улучшить и как.
+                        Hello, my name is Maksym Kozlov. I am a developer from Ukraine currently living in Italy, where I moved when I was 14 years old. I quickly learned the Italian language from scratch and completed my economics school with honors. During the last years of school, I developed a passion for web development and began diving into the world of programming on my own. Initially, I used to jump from one topic to another, but I eventually decided to enroll in the university's computer science faculty to gain more structured knowledge.
+During my university years, I participated in the ERASMUS program in Sweden for six months, where I successfully passed all the exams. Currently, I have finished my thesis and only need to present it, already achieving the maximum points. In addition to web development, I am interested in developing my skills in machine learning, the basics of which I learned in Sweden.
                         </p>
                     </div>
                 </div>

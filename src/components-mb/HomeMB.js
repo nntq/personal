@@ -17,12 +17,12 @@ export default function HomeMB(){
                             <img alt="" src={require("../imgs/home__img.png")} />
                         </div>
                         <div  className='home-mb_title'>  
-                            <div initial={{scale: 0}} animate={{scale: 1}} transition={{duration: .6, delay: .3}} className='home-mb_firstmsg_bg'>
+                            <motion.div initial={{scale: 0}} animate={{scale: 1}} transition={{duration: .6, delay: .3}} className='home-mb_firstmsg_bg'>
                                 <h1>Hello World!</h1>
-                            </div>
-                            <div initial={{scale: 0}} animate={{scale: 1}} transition={{duration: .6, delay: 1.2}} className='home-mb_secondmsg_bg'>
+                            </motion.div>
+                            <motion.div initial={{scale: 0}} animate={{scale: 1}} transition={{duration: .6, delay: 1.2}} className='home-mb_secondmsg_bg'>
                                 <h1>Let me show you<br/> something</h1>
-                            </div>
+                            </motion.div>
                         </div>
                         
                     </div>
