@@ -1,9 +1,9 @@
 import React, {useRef, useState, useEffect} from 'react'
 import {motion, useScroll, useTransform} from 'framer-motion'
 
-export default function ContactMB(){
+export default function ContactMB(props){
 
-    const [submitted, setSubmit] = useState(false);
+    
 
     const FORM = "https://public.herotofu.com/v1/9ec60e80-68ea-11ee-8bcd-4fcc9e7e7286"
 
@@ -41,29 +41,29 @@ export default function ContactMB(){
             if(!res.ok){
                 throw new Error('Form response was not ok');
             } else {
-                setSubmit(true);
+                props.setSubmit(true);
             }
         }).catch((err)=>{
             e.target.submit();
         });
 
-        setSubmit(true)
+        props.setSubmit(true)
 
     }
 
     useEffect(()=>{
-        console.log(submitted)
-        if(submitted){
+        console.log(props.submitted)
+        if(props.submitted){
             setTimeout(()=>{
-                setSubmit(false)
-                console.log(submitted)
+                props.setSubmit(false)
+                console.log(props.submitted)
             }, 1000)
         }
     })
 
     return (
         <div ref={contactRef} className='contact-mb'>
-            {submitted && (<motion.div initial className='submitted'>
+            {props.submitted && (<motion.div initial className='submitted'>
                     <p>Thank you for your message.</p>
                 </motion.div>)
                 }
@@ -110,7 +110,7 @@ export default function ContactMB(){
                                             <path stroke="#000000" stroke-linejoin="round" stroke-width="12" d="M22 57.265V142c0 5.523 4.477 10 10 10h24V95.056l40 30.278 40-30.278V152h24c5.523 0 10-4.477 10-10V57.265c0-13.233-15.15-20.746-25.684-12.736L96 81.265 47.684 44.53C37.15 36.519 22 44.032 22 57.265Z"/>
                                         </svg>
                                     </a>
-                                    <a href='https://www.linkedin.com/in/maksym-kozlov-82b6001b6/?originalSubdomain=it'>
+                                    <a href='https://www.linkedin.com/in/maksym-kozlov-62307b297/'>
                                         <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#0F0F0F"/>
                                             <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#0F0F0F"/>

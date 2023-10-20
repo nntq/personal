@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 import SkillsContent from './components/SkillsContent';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import React, {useRef} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import HomeMB from './components-mb/HomeMB';
 import AboutMB from './components-mb/AboutMB';
 import AboutContentMB from './components-mb/AboutContentMB';
@@ -22,6 +22,8 @@ function App() {
   const skills = useRef(null);
   const contact = useRef(null);
   const home = useRef(null);
+
+  const [submitted, setSubmit] = useState(false);
   
 
   return (
@@ -33,7 +35,7 @@ function App() {
         <AboutContentMB />
         <SkillsMB />
         <SkillsContentMB />
-        <ContactMB />
+        <ContactMB submitted={submitted} setSubmit={setSubmit} />
         <Home change={setPage}/>
         <About change={setPage}/>
         <AboutContent about={about}/>
