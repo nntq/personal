@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from 'react'
+import React, {useRef, useEffect} from 'react'
 import {motion, useScroll, useTransform} from 'framer-motion'
 
 export default function ContactMB(props){

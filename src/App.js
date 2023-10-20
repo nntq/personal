@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 import SkillsContent from './components/SkillsContent';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useRef} from 'react'
 import HomeMB from './components-mb/HomeMB';
 import AboutMB from './components-mb/AboutMB';
 import AboutContentMB from './components-mb/AboutContentMB';
